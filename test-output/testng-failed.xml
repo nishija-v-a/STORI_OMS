@@ -3,6 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+
+      <class name="OMSTest.OMSTest">
+        <methods>
+          <include name="OMSSalesOrdersTest"/>
+          <include name="suiteTearDown"/>
+          <include name="suiteSetup"/>
+        </methods>
+      </class> <!-- OMSTest.OMSTest -->
+
       <class name="OMS_Test.OMS_STORI_Test">
         <methods>
           <include name="Createorder_Test"/>
@@ -10,6 +19,7 @@
           <include name="exit"/>
         </methods>
       </class> <!-- OMS_Test.OMS_STORI_Test -->
+
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
